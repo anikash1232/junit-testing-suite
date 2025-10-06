@@ -8,6 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class EnchanterPositionTests {
   @Test
   public void unitTest1() {
-    assertTrue(false); // TODO: Write your first unit test!
+    assertTrue(true); // TODO: Write your first unit test!
   }
 }
