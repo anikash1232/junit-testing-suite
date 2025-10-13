@@ -12,6 +12,8 @@ public class SorcererPlayerTests {
     assertEquals("nandan", p.getName());
     assertEquals(2, p.getPosition().getX());
     assertEquals(3, p.getPosition().getY());
+    assertNotNull(p.getInventory());
+    assertTrue(p.getInventory().isEmpty());
   }
 
   @Test
@@ -54,9 +56,16 @@ public class SorcererPlayerTests {
   }
 
   @Test
-  public void testConstructorInitializesInventory() {
+  public void testInventoryWorks() {
     PlayerImpl p = new PlayerImpl("nandan", 0, 0);
     assertNotNull(p.getInventory());
     assertTrue(p.getInventory().isEmpty());
+
+    ItemImpl item = new ItemImpl("key");
+    p.getInventory().addItem(item);
+
+    assertFalse(p.getInventory().isEmpty());
+    assertEquals(1, p.getInventory().getNumItems());
+    assertTrue(p.getInventory().getItems().contains(item));
   }
 }
