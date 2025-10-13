@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a021e33-6924-420d-8dcd-01c0a1cf9f14" name="Changes" comment="Start with assertTrue tests." />
+    <list default="true" id="0a021e33-6924-420d-8dcd-01c0a1cf9f14" name="Changes" comment="Start with assertTrue tests.">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/comp301/a04junit/SorcererInventoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/comp301/a04junit/SorcererInventoryTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1759399020369</updated>
-      <workItem from="1760299522748" duration="7994000" />
+      <workItem from="1760299522748" duration="8296000" />
     </task>
     <task id="LOCAL-00001" summary="updated starter to reflect junit5 and new packages.">
       <option name="closed" value="true" />
