@@ -40,4 +40,11 @@ public class EnchanterItemTests {
     ItemImpl i = new ItemImpl("nandan");
     assertEquals("nandan", i.toString());
   }
+
+  @Test
+  public void testEqualsCapitalizedName() {
+    ItemImpl i1 = new ItemImpl("nandan");
+    ItemImpl i2 = new ItemImpl("NANDAN");
+    assertTrue(i1.equals(i2));
+  }
 }
