@@ -49,4 +49,12 @@ public class ApprenticeAlphabetizerTests {
     assertEquals("anirudh", alpha.next());
     assertEquals("bibek", alpha.next());
   }
+
+  @Test
+  public void testArrayNotChanged() {
+    String[] arr = {"charanjit", "bibek", "anirudh"};
+    String[] copy = arr.clone();
+    Alphabetizer alpha = new Alphabetizer(arr);
+    assertArrayEquals(copy, arr);
+  }
 }
