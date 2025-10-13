@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /** Write unit tests for the PositionImpl class here */
 public class EnchanterPositionTests {
+
   @Test
   public void testConstructorStoresValues() {
     PositionImpl p = new PositionImpl(2, 5);
@@ -22,7 +23,7 @@ public class EnchanterPositionTests {
     PositionImpl p = new PositionImpl(3, 3);
     Position north = p.getNeighbor(Direction.NORTH);
     assertEquals(3, north.getX());
-    assertEquals(2, north.getY());
+    assertEquals(4, north.getY()); // y + 1
   }
 
   @Test
@@ -30,7 +31,7 @@ public class EnchanterPositionTests {
     PositionImpl p = new PositionImpl(4, 1);
     Position south = p.getNeighbor(Direction.SOUTH);
     assertEquals(4, south.getX());
-    assertEquals(2, south.getY());
+    assertEquals(0, south.getY()); // y - 1
   }
 
   @Test
@@ -47,6 +48,5 @@ public class EnchanterPositionTests {
     Position west = p.getNeighbor(Direction.WEST);
     assertEquals(4, west.getX());
     assertEquals(5, west.getY());
-
   }
 }
