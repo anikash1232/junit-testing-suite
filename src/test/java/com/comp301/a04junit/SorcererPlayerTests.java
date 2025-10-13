@@ -52,4 +52,11 @@ public class SorcererPlayerTests {
       new PlayerImpl(null, 0, 0);
     });
   }
+
+  @Test
+  public void testConstructorInitializesInventory() {
+    PlayerImpl p = new PlayerImpl("nandan", 0, 0);
+    assertNotNull(p.getInventory());
+    assertTrue(p.getInventory().isEmpty());
+  }
 }
