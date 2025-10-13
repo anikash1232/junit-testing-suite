@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/** Write unit tests for the ItemImpl class here */
 public class EnchanterItemTests {
 
   @Test
@@ -43,8 +42,12 @@ public class EnchanterItemTests {
 
   @Test
   public void testEqualsCapitalizedName() {
-    ItemImpl i1 = new ItemImpl("nandan");
-    ItemImpl i2 = new ItemImpl("NANDAN");
+    ItemImpl i1 = new ItemImpl("Nandan");
+    ItemImpl i2 = new ItemImpl("Nandan");
+    ItemImpl i3 = new ItemImpl("nandan");
     assertTrue(i1.equals(i2));
+    assertFalse(i1.equals(i3));
+    assertEquals("Nandan", i1.getName());
+    assertEquals("Nandan", i1.toString());
   }
 }
