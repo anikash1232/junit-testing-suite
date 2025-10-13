@@ -57,4 +57,20 @@ public class ApprenticeAlphabetizerTests {
     Alphabetizer alpha = new Alphabetizer(arr);
     assertArrayEquals(copy, arr);
   }
+
+  @Test
+  public void testNullArray() {
+    try {
+      new Alphabetizer(null);
+      fail("Should throw exception for null array");
+    } catch (IllegalArgumentException | NullPointerException e) {
+    }
+  }
+
+  @Test
+  public void testCapitalizedWords() {
+    String[] arr = {"anirudh", "Bibek", "charanjit"};
+    Alphabetizer alpha = new Alphabetizer(arr);
+    assertTrue(alpha.next().equals("Bibek") || alpha.next().equals("anirudh"));
+  }
 }
