@@ -38,6 +38,6 @@ public class EnchanterItemTests {
   @Test
   public void testToString() {
     ItemImpl i = new ItemImpl("nandan");
-    assertEquals("This is an item.", i.toString());
+    assertEquals("nandan", i.toString());
   }
 }
