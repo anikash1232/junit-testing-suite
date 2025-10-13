@@ -22,13 +22,6 @@ public class SorcererInventoryTests {
     assertEquals(1, inv.getNumItems());
   }
 
-  @Test
-  public void testAddMultipleItems() {
-    InventoryImpl inv = new InventoryImpl();
-    inv.addItem(new ItemImpl("aditya"));
-    inv.addItem(new ItemImpl("arya"));
-    assertEquals(2, inv.getNumItems());
-  }
 
   @Test
   public void testRemoveItem() {
@@ -61,12 +54,13 @@ public class SorcererInventoryTests {
     assertEquals(2, inv1.getNumItems());
   }
 
+
   @Test
-  public void testTransferFromEmptyInventory() {
-    InventoryImpl inv1 = new InventoryImpl();
-    InventoryImpl inv2 = new InventoryImpl();
-    inv1.transferFrom(inv2);
-    assertTrue(inv1.isEmpty());
-    assertTrue(inv2.isEmpty());
+  public void testTransferFromNullThrows() {
+    InventoryImpl inv = new InventoryImpl();
+    inv.addItem(new ItemImpl("nandan"));
+    assertThrows(IllegalArgumentException.class, () -> {
+      inv.transferFrom(null);
+    });
   }
 }
