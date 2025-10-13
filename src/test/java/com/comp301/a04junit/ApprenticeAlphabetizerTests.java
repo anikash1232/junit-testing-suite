@@ -60,11 +60,9 @@ public class ApprenticeAlphabetizerTests {
 
   @Test
   public void testNullArray() {
-    try {
+    assertThrows(IllegalArgumentException.class, () -> {
       new Alphabetizer(null);
-      fail("Should throw exception for null array");
-    } catch (IllegalArgumentException | NullPointerException e) {
-    }
+    });
   }
 
   @Test
